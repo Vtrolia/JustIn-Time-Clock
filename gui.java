@@ -16,7 +16,6 @@ import java.awt.Font;
  * 
  * @author Vincent W. Trolia
  * @version 1.0
- * @see justInClientGUI, justInServerGUI
  *
  */
 @SuppressWarnings("serial")

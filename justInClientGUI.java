@@ -111,6 +111,7 @@ class LoginWindow extends JPanel implements ActionListener, KeyListener {
 	
 	/**
 	 * This constructor sets up the text field with the default length and the fonts provided by the caller
+	 * 
 	 * @param title: the font for the title section that says "Welcome to the JustIn Time Clock"
 	 * @param words: the font for every other bit of text in the login screen
 	 */
@@ -126,6 +127,7 @@ class LoginWindow extends JPanel implements ActionListener, KeyListener {
 	
 	/**
 	 * This constructor takes additional parameters to set the desired length of the employee's ID#s.
+	 * 
 	 * @param title: the font for the title section that says "Welcome to the JustIn Time Clock"
 	 * @param words: the font for every other bit of text in the login screen
 	 * @param min: the smallest length of a valid id (in characters), 5 = '12345'
@@ -147,6 +149,7 @@ class LoginWindow extends JPanel implements ActionListener, KeyListener {
 	 * function creates the login screen as it appears on the JFrame. It creates a title, the running time clock,
 	 * and a form for the user to fill their id into. It also sets up listeners and allows for the more complicated
 	 * functionality in the user editable components.
+	 * 
 	 * @param title: the font for the title of the login screen
 	 * @param words: the font for every other bit of text in the login screen
 	 */
@@ -239,6 +242,7 @@ class LoginWindow extends JPanel implements ActionListener, KeyListener {
 	 * The action listener capability of this class only needs to listen for enter being pressed or the 
 	 * submit button being pressed. If it does, then we stop the infinite looping time clock and then the
 	 * calling class can get the string of the employeeID back.
+	 * 
 	 * @note currently while in testing, it sets a placeholder label to show the number back to the user,
 	 * this will be removed in production
 	 * @param e an ActionEvent to check the source of
@@ -260,6 +264,7 @@ class LoginWindow extends JPanel implements ActionListener, KeyListener {
 	 * For the key event, every key typed is going to be checked to give the user instant feedback for whether
 	 * or not the ID they entered was valid or not. When it is valid, they are allowed to submit. This also
 	 * sets tooltips to give users useful info on what is considered valid input
+	 * 
 	 * @param e: a KeyeEvent
 	 */
 	@Override
@@ -307,6 +312,7 @@ class LoginWindow extends JPanel implements ActionListener, KeyListener {
 	/**
 	 * The only getter needed for this class, it gets the all important, valid user ID. If the user has not
 	 * yet entered a valid ID#, this will return null.
+	 * 
 	 * @return: a string if there is a valid ID# entered, else it returns null
 	 */
 	public String getIDString() {
@@ -318,6 +324,7 @@ class LoginWindow extends JPanel implements ActionListener, KeyListener {
 	 * To fit the needs of end user administrators, this allows the dynamic selection of ID number lengths.
 	 * The minimum and maximum are setable for both ease of use and security, ensuring that invalid IDs are not
 	 * even sent to the server
+	 * 
 	 * @param min: the smallest length of a valid id (in characters), 5 = '12345'
 	 * @param max: the longest allowed length of a valid id
 	 */
@@ -395,6 +402,7 @@ class OptionsWindow extends JPanel implements ActionListener {
 	 * This function does the neccesary steps for creating the new JPanel and making it look correct. If a constructor
 	 * with no name is called, it sets the greeting title text to a placeholder and will not make the panel visible.
 	 * If the constructor with a name is called, then just jump ahead and make it visible.
+	 * 
 	 * @param name: A string representing the employee's actual name, not the string version of their ID.
 	 * @throws IllegalArgumentException
 	 */
@@ -489,6 +497,7 @@ class OptionsWindow extends JPanel implements ActionListener {
 	/**
 	 * This is the private version of setGreetingText(), where the constructor can set the label visible or invisible
 	 * based on which one was called. If an empty string gets passed, an exception is throw
+	 * 
 	 * @param name: the user's name as a string
 	 * @param setVis: a boolean representing whether or not the greeting text should be displayed or not. If not,
 	 * the placeholder passed in by the constructor will be the value
@@ -531,6 +540,7 @@ class OptionsWindow extends JPanel implements ActionListener {
 	/**
 	 * This is the public version to be used by the JustInClientGUI to allow the caller of this object to 
 	 * set the name displayed as a greeting if it wasn't already set
+	 * 
 	 * @param name: A string representing the employee's actual name, not the string version of their ID.
 	 */
 	public void setGreetingText(String name) {
@@ -572,8 +582,8 @@ class OptionsWindow extends JPanel implements ActionListener {
 /**
  * This class allows the user to make time entries. They put in some metadata about where and what work they are 
  * doing then this information is stored form-style as a HashMap.
+ * 
  * @author Vincent W. Trolia
- *
  */
 @SuppressWarnings("serial")
 class CardEntryScreen extends JPanel implements MouseListener {
@@ -603,6 +613,7 @@ class CardEntryScreen extends JPanel implements MouseListener {
 	/**
 	 * Constructor. This constructor takes in an ID if it's already supplied and converted into an integer.
 	 * Otherwise it can be added later. 
+	 * 
 	 * @param IDnumber: the numerical id of the employee making the time card entry
 	 * @param Title: The font to be used for the text
 	 */
@@ -615,6 +626,7 @@ class CardEntryScreen extends JPanel implements MouseListener {
 	
 	/**
 	 * Constructor. This is the more basic version that only needs to take in a font.
+	 * 
 	 * @param Title: The font to be used for the text
 	 */
 	public CardEntryScreen(Font Title) {
@@ -739,6 +751,7 @@ class CardEntryScreen extends JPanel implements MouseListener {
 	/**
 	 * The public interface for adding the possible jobs for either just the user or the company, depending on
 	 * the implementation later
+	 * 
 	 * @param pos: the string array of the possible job titles
 	 */
 	public void setPositions(String[] pos) {
@@ -753,6 +766,7 @@ class CardEntryScreen extends JPanel implements MouseListener {
 	
 	/**
 	 * The public interface for adding the locations the user may be working at.
+	 * 
 	 * @param locs: the string array of possible locations
 	 */
 	public void setLocations(String [] locs) {
@@ -767,6 +781,7 @@ class CardEntryScreen extends JPanel implements MouseListener {
 	
 	/**
 	 * If the id wasn't supplied by the constructor, it can be set here
+	 * 
 	 * @param id: the id of the current user
 	 */
 	public void setId(int id) {
@@ -779,6 +794,7 @@ class CardEntryScreen extends JPanel implements MouseListener {
 	 * later on. There is a suppressed unchecked warning, but only because the checking works differently than
 	 * what would normally be required for an object cast. The object is either a HashMap or null, the only code
 	 * that touches this HashMap will set it to one of the two.
+	 * 
 	 * @return: A cloned copy of the EntryValues HashMap
 	 */
 	@SuppressWarnings("unchecked")

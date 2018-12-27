@@ -76,7 +76,8 @@ public class gui extends JPanel {
 	
 	/**
 	 * Get the width of the window
-	 * @return an int representing the width of the window in pixels
+	 * 
+	 * @return: an int representing the width of the window in pixels
 	 */
 	public int getWidth() {
 		return WINDOW_WIDTH;
@@ -84,7 +85,8 @@ public class gui extends JPanel {
 	
 	/**
 	 * Get the height of the window
-	 * @return an int representing the height of the window in pixels
+	 * 
+	 * @return: an int representing the height of the window in pixels
 	 */
 	public int getHeight() {
 		return WINDOW_HEIGHT;
@@ -94,7 +96,8 @@ public class gui extends JPanel {
 	 * For purpose of making the GUI more dynamic, the min and max ID lengths are to be set by an administrator.
 	 * The GUI will in turn react to whether of not the ID appears to be valid or not. That is why we have these
 	 * getters
-	 * @return an int that sets the minimum required length of an employee ID
+	 * 
+	 * @return: an int that sets the minimum required length of an employee ID
 	 */
 	public int getMinID() {
 		return ID_MINLENGTH;
@@ -104,7 +107,8 @@ public class gui extends JPanel {
 	 * For purpose of making the GUI more dynamic, the min and max ID lengths are to be set by an administrator.
 	 * The GUI will in turn react to whether of not the ID appears to be valid or not. That is why we have these
 	 * getters
-	 * @return an int that sets the maximum allowed length of an employee ID
+	 * 
+	 * @return: an int that sets the maximum allowed length of an employee ID
 	 */
 	public int getMaxID() {
 		return ID_MAXLENGTH;
@@ -113,7 +117,8 @@ public class gui extends JPanel {
 	/**
 	 * This gets the font used by the titles of all screens on the Client/server GUIs. Because these Font objects
 	 * are not to be edited, so the pointer to the original is not passed back
-	 * @return a cloned font that is identical to the TITLE_FONT in a new Font object
+	 * 
+	 * @return: a cloned font that is identical to the TITLE_FONT in a new Font object
 	 */
 	public Font getTitleFont() {
 		return new Font("Rockwell", Font.PLAIN, 22);
@@ -123,7 +128,8 @@ public class gui extends JPanel {
 	 * This gets the font used by all other areas of the GUI, and the general font used by the components that
 	 * aren't the title. Like the TITLE_FONT, the original font is not meant to be edited so a pointer to a new 
 	 * Font is returned
-	 * @return a cloned font that is identical to the TITLE_FONT in a new Font object
+	 * 
+	 * @return: a cloned font that is identical to the TITLE_FONT in a new Font object
 	 */
 	public Font getWordFont() {
 		return new Font("Rockwell", Font.PLAIN, 16);
@@ -132,7 +138,8 @@ public class gui extends JPanel {
 	/**
 	 * ID length is a dynamic variable that will change based on how the end user implements employee IDing,
 	 * so the minimum length will be editable
-	 * @param updatedLength, an integer that administrators want to use as the smallest employeeID
+	 * 
+	 * @param updatedLength: an integer that administrators want to use as the smallest employeeID
 	 */
 	public void setMinID(int updatedLength) {
 		ID_MINLENGTH = updatedLength;
@@ -141,7 +148,8 @@ public class gui extends JPanel {
 	/**
 	 * ID length is a dynamic variable that will change based on how the end user implements employee IDing,
 	 * so the maximum length will be editable
-	 * @param longestLength, and integer that will represent the largest employeeID that administrators will allow
+	 * 
+	 * @param longestLength: and integer that will represent the largest employeeID that administrators will allow
 	 */
 	public void setMaxID(int longestLength) {
 		ID_MAXLENGTH = longestLength;
